@@ -1,5 +1,28 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+
+        // Email e loglama islemi
+        /*
+                EmailLogger emailLogger = new EmailLogger();
+                emailLogger.log("Log mesajı");
+        */
+
+        // BaseLogger dan mira alıyor. Inherit ediliyor.
+
+
+        // Core logging
+        /*
+                BaseLogger[] loggers = new BaseLogger[] {new FileLogger(), new EmailLogger(), new DatabaseLogger(),new ConsoleLogger()};
+                for (BaseLogger logger : loggers) {
+                     logger.log("Log mesajı");
+                }
+         */
+
+
+        CustomerManager customerManager = new CustomerManager(new DatabaseLogger());
+        customerManager.add();
+
+
     }
 }
